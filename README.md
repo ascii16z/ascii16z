@@ -1,7 +1,7 @@
 # ascii16z 🤖
 
 <div align="center">
-  <img src="./docs/static/img/ascii16z_banner.jpg" alt="ascii16z Banner" width="100%" />
+  <img src="./docs/static/img/asciii1banner2.png" alt="ascii16z Banner" width="100%" />
 </div>
 
 <div align="center">
