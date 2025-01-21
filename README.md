@@ -106,23 +106,79 @@ Embrace a deeper mystery with a superior AI agent.
 
 ### Integrating in Scripts
 
-```js
-// example.js
-const axios = require("axios");
+Below is an example of how to use the ASCII art generation functions within your AI agent to generate ASCII art based on user input.
 
-async function generateAsciiArt(textPrompt) {
-  try {
-    const response = await axios.post("http://localhost:3000/generate", {
-      prompt: textPrompt,
-    });
-    console.log(response.data.asciiArt);
-  } catch (error) {
-    console.error(error);
-  }
+1. Import Required Modules
+Ensure that you have the necessary modules and functions imported.
+
+javascript
+Copy
+// aiAgentExample.js
+
+const path = require('path');
+const fs = require('fs');
+const { processUserMessage } = require('./server'); // Ensure server.js exports this function
+const { renderAsciiToImage } = require('./asciiArtGenerator');
+2. Configure ASCII Art Settings
+Define your ASCII art configuration.
+
+javascript
+Copy
+const ASCII_CONFIG = {
+    ASCII_CHARS: ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.'], // Characters from dark to light
+    font: '12px monospace',       // Font settings for the canvas
+    lineHeight: 14,               // Line height for the ASCII art (in pixels)
+    backgroundColor: '#ffffff',   // Background color for the output image
+    textColor: '#000000',         // Text color for the ASCII characters
+    outputWidth: 100               // Width of the ASCII art (number of characters per line)
+};
+3. Generate ASCII Art from User Input
+Create a function to handle user input and generate ASCII art.
+
+javascript
+Copy
+/**
+ * Generates ASCII art from user input using the AI agent.
+ * @param {string} userMessage - The user's input message.
+ */
+async function generateAsciiArt(userMessage) {
+    try {
+        // Process the user message to get text response, image URL, and ASCII art
+        const response = await processUserMessage(userMessage);
+        
+        console.log('--- Text Response ---');
+        console.log(response.text);
+        
+        console.log('--- Image URL ---');
+        console.log(response.image);
+        
+        console.log('--- ASCII Art ---');
+        console.log(response.asciiArt);
+        
+        // Render ASCII art to PNG image
+        const asciiArtArray = response.asciiArt.split('\n');
+        const asciiImagePath = path.join(__dirname, 'outputs', `ascii_art_${Date.now()}.png`);
+        renderAsciiToImage(asciiArtArray, asciiImagePath, ASCII_CONFIG);
+        console.log(`ASCII art image saved to ${asciiImagePath}`);
+        
+    } catch (error) {
+        console.error('Error generating ASCII art:', error);
+    }
 }
 
-generateAsciiArt("ASCII16Z is awesome!");
-```
+// Example usage
+const userInput = "Describe the future of Tokyo in a cyberpunk style";
+generateAsciiArt(userInput);
+4. Running the AI Agent Example
+Ensure that your server (server.js) exports the processUserMessage function. Modify server.js as follows if not already done:
+
+javascript
+Copy
+// At the end of server.js
+
+module.exports = {
+    processUserMessage
+};
 
 ---
 
