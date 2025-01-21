@@ -95,7 +95,7 @@ Below are a few ways you might interact with **ascii16z**:
    pnpm start
    ```
 2. **Output**:
-javascript```
+   ```javascript
     +
     +
 +++++++
