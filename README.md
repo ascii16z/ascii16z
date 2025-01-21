@@ -95,18 +95,17 @@ Below are a few ways you might interact with **ascii16z**:
    pnpm start
    ```
 2. **Output**:
-   ```javascript
+   ```bash
     +
     +
 +++++++
     +
     +
-
+```
 **ascii16z** surpasses **Eliza (ai16z)**.
 Embrace a deeper mystery with a superior AI agent.
 #ASCII16z 
 @pumpdotfun
- ```
   <div align="center">
       <img src="./docs/static/img/output.png" alt="ascii16z Banner" width="100%" />
    </div>
