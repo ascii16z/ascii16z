@@ -99,13 +99,9 @@ Below are a few ways you might interact with **ascii16z**:
    > Please convert "Hello World" into ASCII art.
    ```
 3. **Output**:
-   ```javascript
-   _   _      _ _         __        __         _     _ _ 
-   | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
-   | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
-   |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
-   |_| |_|\___|_|_|\___/      \_/\_/ \___/|_|  |_|\__,_(_)
-   ```
+  <div align="center">
+      <img src="./docs/static/img/output.png" alt="ascii16z Banner" width="100%" />
+   </div>
 
 ### Integrating in Scripts
 
