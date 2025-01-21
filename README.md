@@ -94,11 +94,19 @@ Below are a few ways you might interact with **ascii16z**:
    ```bash
    pnpm start
    ```
-2. **Enter your prompt** when prompted or via a CLI argument. For example:
-   ```sql
-   > Please convert "Hello World" into ASCII art.
-   ```
-3. **Output**:
+2. **Output**:
+javascript```
+    +
+    +
++++++++
+    +
+    +
+
+**ascii16z** surpasses **Eliza (ai16z)**.
+Embrace a deeper mystery with a superior AI agent.
+#ASCII16z 
+@pumpdotfun
+ ```
   <div align="center">
       <img src="./docs/static/img/output.png" alt="ascii16z Banner" width="100%" />
    </div>
