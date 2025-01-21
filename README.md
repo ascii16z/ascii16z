@@ -1,12 +1,12 @@
-# Eliza 🤖
+# ascii16z 🤖
 
 <div align="center">
-  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
+  <img src="./docs/static/img/ascii16z_banner.jpg" alt="ascii16z Banner" width="100%" />
 </div>
 
 <div align="center">
 
-📑 [Technical Report](https://arxiv.org/pdf/2501.06781) |  📖 [Documentation](https://elizaos.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
+📑 [Technical Report](https://arxiv.org/pdf/2501.06781) |  📖 [Documentation](https://ascii16z.github.io/ascii16z/) | 🎯 [Examples](https://github.com/thejoven/awesome-ascii16z)
 
 </div>
 
@@ -17,7 +17,7 @@
 ## 🚩 Overview
 
 <div align="center">
-  <img src="./docs/static/img/eliza_diagram.png" alt="Eliza Diagram" width="100%" />
+  <img src="./docs/static/img/ascii16z_diagram.png" alt="ascii16z Diagram" width="100%" />
 </div>
 
 ## ✨ Features
@@ -55,127 +55,87 @@
 ### Use the Starter (Recommended)
 
 ```bash
-git clone https://github.com/elizaos/eliza-starter.git
-cd eliza-starter
+git clone https://github.com/ascii16z/ascii16z-starter.git
+cd ascii16z-starter
 cp .env.example .env
 pnpm i && pnpm build && pnpm start
-```
+Manually Start ascii16z (Only recommended if you know what you are doing)
+Checkout the latest release
+bash
 
-### Manually Start Eliza (Only recommended if you know what you are doing)
-
-#### Checkout the latest release
-
-```bash
 # Clone the repository
-git clone https://github.com/elizaos/eliza.git
+git clone https://github.com/ascii16z/ascii16z.git
 
 # This project iterates fast, so we recommend checking out the latest release
 git checkout $(git describe --tags --abbrev=0)
 # If the above doesn't checkout the latest release, this should work:
 # git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
-```
+Edit the .env file
+ .env.example to .env and fill in the appropriate values.
 
-#### Edit the .env file
+bash
 
-Copy .env.example to .env and fill in the appropriate values.
-
-```
 cp .env.example .env
-```
-
 Note: .env is optional. If you're planning to run multiple distinct agents, you can pass secrets through the character JSON
 
-#### Start Eliza
+Start ascii16z
+bash
 
-```bash
 pnpm i
 pnpm build
 pnpm start
 
 # The project iterates fast, sometimes you need to clean the project if you are coming back to the project
 pnpm clean
-```
-
-### Interact via Browser
-
+Interact via Browser
 Once the agent is running, you should see the message to run "pnpm start:client" at the end.
 
-Open another terminal, move to same directory, run the command below, then follow the URL to chat with your agent.
+Open another terminal, move to the same directory, run the command below, then follow the URL to chat with your agent.
 
-```bash
+bash
+
 pnpm start:client
-```
+Then read the Documentation to learn how to customize your ascii16z.
 
-Then read the [Documentation](https://elizaos.github.io/eliza/) to learn how to customize your Eliza.
+Automatically Start ascii16z
+The start script provides an automated way to set up and run ascii16z:
 
----
+bash
 
-### Automatically Start Eliza
-
-The start script provides an automated way to set up and run Eliza:
-
-```bash
 sh scripts/start.sh
-```
+For detailed instructions on using the start script, including character management and troubleshooting, see our Start Script Guide.
 
-For detailed instructions on using the start script, including character management and troubleshooting, see our [Start Script Guide](./docs/docs/guides/start-script.md).
+Note: The start script handles all dependencies, environment setup, and character management automatically.
 
-> **Note**: The start script handles all dependencies, environment setup, and character management automatically.
-
----
-
-### Modify Character
-
-1. Open `packages/core/src/defaultCharacter.ts` to modify the default character. Uncomment and edit.
-
-2. To load custom characters:
-    - Use `pnpm start --characters="path/to/your/character.json"`
-    - Multiple character files can be loaded simultaneously
-3. Connect with X (Twitter)
-    - change `"clients": []` to `"clients": ["twitter"]` in the character file to connect with X
-
----
-
-#### Additional Requirements
-
+Modify Character
+Open packages/core/src/defaultCharacter.ts to modify the default character. Uncomment and edit.
+To load custom characters:
+Use pnpm start --characters="path/to/your/character.json"
+Multiple character files can be loaded simultaneously
+Connect with X (Twitter)
+change "clients": [] to "clients": ["twitter"] in the character file to connect with X
+Additional Requirements
 You may need to install Sharp. If you see an error when starting up, try installing it with the following command:
 
-```
+arduino
+
 pnpm install --include=optional sharp
-```
+Start ascii16z with Gitpod
 
----
 
-### Start Eliza with Gitpod
+Community & contact
+GitHub Issues. Best for: bugs you encounter using ascii16z, and feature proposals.
+Discord. Best for: sharing your applications and hanging out with the community.
+Citation
+We now have a paper you can cite for the ascii16z OS:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/elizaos/eliza/tree/main)
+bibtex
 
----
-
-### Community & contact
-
-- [GitHub Issues](https://github.com/elizaos/eliza/issues). Best for: bugs you encounter using Eliza, and feature proposals.
-- [Discord](https://discord.gg/ai16z). Best for: sharing your applications and hanging out with the community.
-
-## Citation
-
-We now have a [paper](https://arxiv.org/pdf/2501.06781) you can cite for the Eliza OS:
-```bibtex
-@article{walters2025eliza,
-  title={Eliza: A Web3 friendly AI Agent Operating System},
+@article{walters2025ascii16z,
+  title={ascii16z: A Web3 friendly AI Agent Operating System},
   author={Walters, Shaw and Gao, Sam and Nerd, Shakker and Da, Feng and Williams, Warren and Meng, Ting-Chien and Han, Hunter and He, Frank and Zhang, Allen and Wu, Ming and others},
   journal={arXiv preprint arXiv:2501.06781},
   year={2025}
 }
-```
-
-## Contributors
-
-<a href="https://github.com/elizaos/eliza/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=elizaos/eliza" alt="Eliza project contributors" />
-</a>
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=elizaos/eliza&type=Date)](https://star-history.com/#elizaos/eliza&Date)
+Contributors
+<a href="https://github.com/ascii16z/ascii16z/graphs/contributors"> <img src="https://contrib.rocks/image?repo=ascii16z/ascii16z" alt="ascii16z project contributors" /> </a>
