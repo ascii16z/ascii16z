@@ -119,11 +119,12 @@ const path = require('path');
 const fs = require('fs');
 const { processUserMessage } = require('./server'); // Ensure server.js exports this function
 const { renderAsciiToImage } = require('./asciiArtGenerator');
+```
 2. Configure ASCII Art Settings
 Define your ASCII art configuration.
 
-javascript
-Copy
+```javascript
+
 const ASCII_CONFIG = {
     ASCII_CHARS: ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.'], // Characters from dark to light
     font: '12px monospace',       // Font settings for the canvas
@@ -132,11 +133,13 @@ const ASCII_CONFIG = {
     textColor: '#000000',         // Text color for the ASCII characters
     outputWidth: 100               // Width of the ASCII art (number of characters per line)
 };
+```
+
 3. Generate ASCII Art from User Input
 Create a function to handle user input and generate ASCII art.
+```javascript
 
-javascript
-Copy
+
 /**
  * Generates ASCII art from user input using the AI agent.
  * @param {string} userMessage - The user's input message.
@@ -169,18 +172,20 @@ async function generateAsciiArt(userMessage) {
 // Example usage
 const userInput = "Describe the future of Tokyo in a cyberpunk style";
 generateAsciiArt(userInput);
+```
 4. Running the AI Agent Example
 Ensure that your server (server.js) exports the processUserMessage function. Modify server.js as follows if not already done:
 
-javascript
-Copy
+```javascript
+
 // At the end of server.js
 
 module.exports = {
     processUserMessage
 };
 sql
-Copy
+```
+
 
 You can add the above markdown content directly into your `README.md` under the **Integrating in Scripts** section. This will provide a clear and formatted example of how to use the ASCII art generation functions within your AI agent setup.
 
