@@ -95,13 +95,7 @@ Below are a few ways you might interact with **ascii16z**:
    pnpm start
    ```
 2. **Output**:
-   ```bash
-    +
-    +
-+++++++
-    +
-    +
-```
+
 **ascii16z** surpasses **Eliza (ai16z)**.
 Embrace a deeper mystery with a superior AI agent.
 #ASCII16z 
