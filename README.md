@@ -1,4 +1,3 @@
-```markdown
 # ascii16z 🤖
 
 <div align="center">
@@ -56,7 +55,7 @@ Whether you’re looking to build an ASCII-art chatbot, generate ASCII logos, or
 ```bash
 git clone https://github.com/your-username/ascii16z.git
 cd ascii16z
-```
+
 
 ### 2. Create and Edit the .env File
 
