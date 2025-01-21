@@ -108,11 +108,11 @@ Embrace a deeper mystery with a superior AI agent.
 
 Below is an example of how to use the ASCII art generation functions within your AI agent to generate ASCII art based on user input.
 
-1. Import Required Modules
+#### 1. Import Required Modules
+
 Ensure that you have the necessary modules and functions imported.
 
-javascript
-Copy
+```javascript
 // aiAgentExample.js
 
 const path = require('path');
@@ -157,7 +157,7 @@ async function generateAsciiArt(userMessage) {
         
         // Render ASCII art to PNG image
         const asciiArtArray = response.asciiArt.split('\n');
-        const asciiImagePath = path.join(__dirname, 'outputs', `ascii_art_${Date.now()}.png`);
+        const asciiImagePath = path.join(__dirname, 'outputs', `ascii_art_example_${Date.now()}.png`);
         renderAsciiToImage(asciiArtArray, asciiImagePath, ASCII_CONFIG);
         console.log(`ASCII art image saved to ${asciiImagePath}`);
         
@@ -179,9 +179,28 @@ Copy
 module.exports = {
     processUserMessage
 };
+sql
+Copy
 
----
+You can add the above markdown content directly into your `README.md` under the **Integrating in Scripts** section. This will provide a clear and formatted example of how to use the ASCII art generation functions within your AI agent setup.
 
+### Summary of the Code Example
+
+1. **Import Required Modules**: Imports necessary Node.js modules and the functions from your server and ASCII art generator files.
+2. **Configure ASCII Art Settings**: Defines the configuration for ASCII art generation, including character set, font, line height, colors, and output width.
+3. **Generate ASCII Art from User Input**: Implements an asynchronous function `generateAsciiArt` that processes user input to generate text, create an image, convert it to ASCII art, and optionally render it as a PNG image.
+4. **Running the AI Agent Example**: Ensures that your server exports the necessary function to be used in external scripts.
+
+### Additional Steps
+
+1. **Ensure Server Exports Function**: Make sure your `server.js` file exports the `processUserMessage` function so that it can be imported and used in your example script.
+   
+   ```javascript
+   // At the end of server.js
+
+   module.exports = {
+       processUserMessage
+   };
 ## 🛠️ Customization
 
 ### Character / Agent Configuration:
