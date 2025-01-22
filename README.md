@@ -248,22 +248,3 @@ Refer to our **Documentation** (TODO: Link your docs) for more advanced or custo
 This project inherits its license from the original fork. See [LICENSE](./LICENSE) for more details.
 
 ---
-
-## 🙌 Contributors
-
-Thanks to all who have contributed (directly or indirectly) to this project!
-
-<a href="https://github.com/your-username/ascii16z/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=your-username/ascii16z" alt="ascii16z Contributors" />
-</a>
-
----
-
-## ⭐ Star History
-
-If you like **ascii16z**, consider giving us a star on GitHub!
-
----
-
-Happy ASCII-Generating! Feel free to open issues or pull requests. We look forward to your contributions and feedback.
-```
